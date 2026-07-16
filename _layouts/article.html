@@ -8,7 +8,8 @@ layout: default
     <p class="article__meta">
       {{ page.date | date: "%B %-d, %Y" }}
       {% if page.tags %}
-        · {% for tag in page.tags %}<span class="article__tag">{{ tag }}</span>{% endfor %}
+        · {% for tag in page.tags %} <a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}" class="article__tag">{{ tag }}
+    </a>
       {% endif %}
     </p>
     {% if page.summary %}<p class="article__summary">{{ page.summary }}</p>{% endif %}
