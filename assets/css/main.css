@@ -26,9 +26,14 @@
 }
 
 :root {
-  --font-display: "Roboto Serif";
+  --font-display: "Roboto Serif", serif;
   --font-body: "Inter", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
+}
+
+h1, h2, h3, .site-title {
+  font-family: var(--font-display);
+  font-weight: 800;
 }
 
 * { box-sizing: border-box; }
