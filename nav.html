@@ -14,4 +14,30 @@
       </li>
     {% endfor %}
   </ul>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" type="button">
+    <span class="theme-toggle__mode">MODE:</span>
+    <span class="theme-toggle__value" id="theme-toggle-value">—</span>
+  </button>
 </nav>
+
+<script>
+  (function() {
+    var btn = document.getElementById('theme-toggle');
+    var valueEl = document.getElementById('theme-toggle-value');
+    var root = document.documentElement;
+
+    function reflect() {
+      var current = root.getAttribute('data-theme') || 'light';
+      valueEl.textContent = current.toUpperCase();
+    }
+    reflect();
+
+    btn.addEventListener('click', function() {
+      var current = root.getAttribute('data-theme') || 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      reflect();
+    });
+  })();
+</script>
