@@ -50,7 +50,7 @@ img { max-width: 100%; display: block; }
 
 body h1, body h2, body h3, main h1, main h2, main main h3, 
 .hero h1, .site-title {
-  font-family: Charis, serif !important;
+  font-family: "Charis", serif !important;
   font-weight: 600 !important;
 }
 
