@@ -1,31 +1,37 @@
 ---
 layout: default
-title: Projects
-permalink: /projects/
+title: Articles
+permalink: /articles/
 ---
 
-<h1>Projects</h1>
+<h1>Articles</h1>
 
-<div class="project-filters">
+<div class="article-filters">
   <button class="filter-btn is-active" data-filter="all">All</button>
-  {% assign categories = site.projects | map: "category" | uniq %}
-  {% for cat in categories %}
-    {% if cat %}
-      <button class="filter-btn" data-filter="{{ cat | slugify }}">{{ cat }}</button>
-    {% endif %}
+  {% assign all_tags = "" | split: "" %}
+  {% for a in site.articles %}
+    {% if a.tags %}{% assign all_tags = all_tags | concat: a.tags %}{% endif %}
+  {% endfor %}
+  {% assign unique_tags = all_tags | uniq %}
+  {% for tag in unique_tags %}
+    <button class="filter-btn" data-filter="{{ tag | slugify }}">{{ tag }}</button>
   {% endfor %}
 </div>
 
-<div class="project-grid">
-  {% assign sorted_projects = site.projects | sort: "date" | reverse %}
-  {% for project in sorted_projects %}
-    <a class="project-card" href="{{ project.url | relative_url }}" data-category="{{ project.category | slugify }}">
-      {% if project.cover_image %}
-        <img src="{{ project.cover_image | relative_url }}" alt="{{ project.title }}">
-      {% endif %}
-      <h3>{{ project.title }}</h3>
-      <p class="project-card__tag">{{ project.category }}</p>
-      {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+<div class="article-list">
+  {% assign sorted_articles = site.articles | sort: "date" | reverse %}
+  {% for a in sorted_articles %}
+    {% assign slugified_tags = "" %}
+    {% for t in a.tags %}
+      {% assign one_slug = t | slugify %}
+      {% assign slugified_tags = slugified_tags | append: one_slug | append: "," %}
+    {% endfor %}
+    <a class="article-card"
+       href="{{ a.url | relative_url }}"
+       data-tags="{{ slugified_tags }}">
+      <h3>{{ a.title }}</h3>
+      <p class="article-card__meta">{{ a.date | date: "%B %-d, %Y" }}</p>
+      {% if a.summary %}<p>{{ a.summary }}</p>{% endif %}
     </a>
   {% endfor %}
 </div>
@@ -36,8 +42,9 @@ permalink: /projects/
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
       btn.classList.add('is-active');
       const filter = btn.dataset.filter;
-      document.querySelectorAll('.project-card').forEach(card => {
-        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+      document.querySelectorAll('.article-card').forEach(card => {
+        const tags = card.dataset.tags.split(',');
+        card.style.display = (filter === 'all' || tags.includes(filter)) ? '' : 'none';
       });
     });
   });
