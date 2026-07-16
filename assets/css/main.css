@@ -294,9 +294,9 @@ h1, h2, h3 {
 }
 
 .hero h1 {
-  font-size: clamp(1.4rem, 4.2vw, 3.4rem); /* Lowered the minimum font size so it successfully scales down on mobile */
+  font-size: clamp(1.8rem, 5.5vw, 3.4rem); /* Lowered the minimum font size so it successfully scales down on mobile */
   white-space: nowrap;                     /* Forces the entire heading to lock cleanly onto 1 line */
-  letter-spacing: -0.02em;                 /* Elegantly tightens up the letters to help it fit on smaller viewports */
+  letter-spacing: -0.04em;                 /* Elegantly tightens up the letters to help it fit on smaller viewports */
 }
 
 .hero__role {
