@@ -26,7 +26,7 @@
 }
 
 :root {
-  --font-display: "Charis", serif;
+  --font-display: "Charis SIL", "Charis", serif; /* Added "Charis SIL" to the front of the variable stack */
   --font-body: "Inter", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
 }
