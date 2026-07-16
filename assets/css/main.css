@@ -69,12 +69,26 @@ h1, h2, h3 {
    ========================================================================== */
 
 .site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--c-bg);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
   padding: 1.25rem 2rem;
   border-bottom: 1px solid var(--c-border);
+  transition: padding 0.25s ease, box-shadow 0.25s ease;
+}
+
+.site-nav.is-compact {
+  padding: 0.875rem 2rem; /* ~30% less vertical padding */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .site-nav.is-compact {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .site-nav__brand {
@@ -82,6 +96,11 @@ h1, h2, h3 {
   font-weight: 700;
   text-decoration: none;
   font-size: 1.1rem;
+  transition: font-size 0.25s ease;
+}
+
+.site-nav.is-compact .site-nav__brand {
+  font-size: 0.77rem; /* ~30% smaller */
 }
 
 .site-nav__links {
@@ -103,6 +122,11 @@ h1, h2, h3 {
   color: var(--c-text-dim);
   padding-bottom: 0.25rem;
   border-bottom: 2px solid transparent;
+  transition: font-size 0.25s ease, color 0.15s ease;
+}
+
+.site-nav.is-compact .site-nav__links a {
+  font-size: 0.56rem; /* ~30% smaller */
 }
 
 .site-nav__links a:hover,
@@ -417,7 +441,45 @@ button:focus-visible {
    ========================================================================== */
 
 @media (max-width: 640px) {
-  .site-nav { flex-wrap: wrap; padding: 1rem; }
-  .site-nav__links { order: 3; width: 100%; justify-content: flex-start; gap: 1rem; overflow-x: auto; }
+  .site-nav {
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    row-gap: 0.6rem;
+  }
+
+  .site-nav__brand {
+    font-size: 0.9rem;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .theme-toggle {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.55rem;
+    flex-shrink: 0;
+  }
+
+  .theme-toggle__mode {
+    display: none; /* hide "MODE:" label on mobile, keep just LIGHT/DARK */
+  }
+
+  .site-nav__links {
+    order: 3;
+    flex-basis: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1.1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .site-nav__links::-webkit-scrollbar {
+    display: none;
+  }
+
   .site-content { padding: 2rem 1.25rem 4rem; }
 }
