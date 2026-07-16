@@ -237,6 +237,26 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   gap: 3rem;
+  position: relative;
+  isolation: isolate; /* keeps ::before layer contained behind hero content */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: var(--hero-photo);
+  background-size: cover;
+  background-position: right center;
+  opacity: 0.16;
+  -webkit-mask-image: linear-gradient(to left, black 15%, transparent 70%);
+          mask-image: linear-gradient(to left, black 15%, transparent 70%);
+  transition: opacity 0.2s ease;
+}
+
+[data-theme="dark"] .hero::before {
+  opacity: 0.22;
 }
 
 .hero__text {
