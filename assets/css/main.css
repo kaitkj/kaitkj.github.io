@@ -126,7 +126,7 @@ h1, h2, h3 {
 }
 
 .site-nav.is-compact .site-nav__links a {
-  font-size: 0.5rem; /* deeper shrink */
+  font-size: 0.75rem; /* deeper shrink */
 }
 
 .site-nav__links a:hover,
@@ -159,7 +159,7 @@ h1, h2, h3 {
 }
 
 .site-nav.is-compact .theme-toggle {
-  font-size: 0.55rem;
+  font-size: 0.8rem;
   padding: 0.25rem 0.5rem;
 }
 
