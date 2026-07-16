@@ -1,0 +1,21 @@
+/* Placeholder styles — replaced with full design in Step 5 */
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.site-nav__links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__links a.is-active {
+  font-weight: bold;
+  text-decoration: underline;
+}

@@ -1,0 +1,18 @@
+# Add/remove tabs here. Each item needs a title and a url.
+# The url should match the page's permalink (see the matching .html files
+# created alongside this, e.g. projects/index.html -> /projects/).
+#
+# To add a new tab later:
+#   1. Add a line below.
+#   2. Create the matching page (copy an existing one like projects/index.html
+#      as a starting point, change its front matter + content).
+# No changes to nav.html or default.html are ever needed.
+
+- title: Home
+  url: /
+- title: Projects
+  url: /projects/
+- title: Articles
+  url: /articles/
+- title: About
+  url: /about/
