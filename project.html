@@ -1,0 +1,64 @@
+---
+layout: default
+---
+<article class="project">
+
+  <header class="project__header">
+    <p class="project__tag">{{ page.category }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p class="project__summary">{{ page.summary }}</p>{% endif %}
+  </header>
+
+  {% if page.cover_image %}
+    <img class="project__cover" src="{{ page.cover_image | relative_url }}" alt="{{ page.title }} cover image">
+  {% endif %}
+
+  <div class="project__body">
+    {{ content }}
+  </div>
+
+  {% if page.video_url %}
+    <div class="project__video">
+      {% assign v = page.video_url %}
+      {% if v contains "youtube.com" or v contains "youtu.be" %}
+        {% assign yt_id = v | split: "v=" | last | split: "&" | first %}
+        {% if v contains "youtu.be" %}
+          {% assign yt_id = v | split: "youtu.be/" | last | split: "?" | first %}
+        {% endif %}
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/{{ yt_id }}"
+                  title="{{ page.title }} video"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+      {% elsif v contains "vimeo.com" %}
+        {% assign vimeo_id = v | split: "vimeo.com/" | last | split: "?" | first %}
+        <div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/{{ vimeo_id }}"
+                  title="{{ page.title }} video"
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+      {% else %}
+        <p><a href="{{ v }}" target="_blank" rel="noopener">Watch video</a></p>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if page.gallery %}
+    <div class="project__gallery">
+      {% for img in page.gallery %}
+        <img src="{{ img | relative_url }}" alt="{{ page.title }} image">
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if page.tags %}
+    <ul class="project__tags">
+      {% for tag in page.tags %}<li>{{ tag }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+
+</article>
