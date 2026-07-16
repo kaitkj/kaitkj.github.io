@@ -126,7 +126,7 @@ h1, h2, h3 {
 }
 
 .site-nav.is-compact .site-nav__links a {
-  font-size: 0.65rem; /* deeper shrink */
+  font-size: 0.65rem;
 }
 
 .site-nav__links a:hover,
