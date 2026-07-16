@@ -250,7 +250,7 @@ h1, h2, h3 {
   background-image: var(--hero-photo);
   background-size: cover;
   background-position: right center;
-  opacity: 0.16;
+  opacity: 0.18;
   -webkit-mask-image: linear-gradient(to left, black 15%, transparent 70%);
           mask-image: linear-gradient(to left, black 15%, transparent 70%);
 }
@@ -271,8 +271,9 @@ h1, h2, h3 {
 
 .hero__photo img {
   width: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 2/3;
   object-fit: cover;
+  object-position: center;
   border: 1px solid var(--c-border);
 }
 
@@ -282,8 +283,13 @@ h1, h2, h3 {
     gap: 1.5rem;
   }
   .hero__photo {
-    max-width: 60%;
+    max-width: 100%;
     align-self: center;
+  }
+  .hero__photo img {
+    aspect-ratio: auto; /* let the original landscape ratio show through, no crop */
+    height: auto;
+    object-fit: contain;
   }
 }
 
