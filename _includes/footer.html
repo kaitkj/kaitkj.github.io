@@ -1,5 +1,9 @@
 <footer class="site-footer">
   <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}.
     {% if site.github %}<a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+    {% if site.linkedin %}&bull; <a href="https://linkedin.com{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+    {% if site.email %}&bull; <a href="mailto:{{ site.email }}">Email Me</a>{% endif %}
+  </p>
+</footer>
   </p>
 </footer>
