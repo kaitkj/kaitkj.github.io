@@ -26,7 +26,7 @@
 }
 
 :root {
-  --font-display: "Charis SIL", "Charis", serif; /* Added "Charis SIL" to the front of the variable stack */
+  --font-display: "Charis SIL", serif; /* Added "Charis SIL" to the front of the variable stack */
   --font-body: "Inter", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
 }
@@ -52,8 +52,8 @@ body h1, body h2, body h3,
 main h1, main h2, main h3, 
 .hero h1, .site-title {
   /* Listing Charis SIL first forces Chrome to map to the remote Google Font file instead of your corrupt system file */
-  font-family: "Charis SIL", "Charis", serif !important; 
-  font-weight: 600 !important;
+  font-family: "Charis SIL", serif !important; 
+  font-weight: 700 !important;3333333333333333333
 }
 
 .eyebrow {
