@@ -26,7 +26,7 @@
 }
 
 :root {
-  --font-display: "BioRhyme", serif;
+  --font-display: "Charis", serif;
   --font-body: "Inter", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
 }
@@ -294,9 +294,8 @@ h1, h2, h3 {
 }
 
 .hero h1 {
-  font-size: clamp(1.8rem, 5.5vw, 3.4rem); /* Lowered the minimum font size so it successfully scales down on mobile */
-  white-space: nowrap;                     /* Forces the entire heading to lock cleanly onto 1 line */
-  letter-spacing: -0.04em;                 /* Elegantly tightens up the letters to help it fit on smaller viewports */
+  font-size: clamp(2.0rem, 5.5vw, 3.4rem); /* Lifted the mobile minimum up safely since Charis fits easily */
+  white-space: nowrap;
 }
 
 .hero__role {
