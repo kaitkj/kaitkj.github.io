@@ -31,11 +31,6 @@
   --font-mono: "IBM Plex Mono", monospace;
 }
 
-h1, h2, h3, .site-title {
-  font-family: var(--font-display);
-  font-weight: 800;
-}
-
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -55,7 +50,7 @@ img { max-width: 100%; display: block; }
 
 h1, h2, h3 {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1.15;
   margin: 0 0 0.5em;
 }
