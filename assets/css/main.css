@@ -83,7 +83,7 @@ h1, h2, h3 {
 }
 
 .site-nav.is-compact {
-  padding: 0.55rem 2rem; /* deeper shrink */
+  padding: 0.55rem 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
@@ -101,7 +101,7 @@ h1, h2, h3 {
 }
 
 .site-nav.is-compact .site-nav__brand {
-  font-size: 0.65rem; /* deeper shrink */
+  font-size: 0.8rem;
 }
 
 .site-nav__links {
@@ -126,7 +126,7 @@ h1, h2, h3 {
 }
 
 .site-nav.is-compact .site-nav__links a {
-  font-size: 0.5rem; /* deeper shrink */
+  font-size: 0.65rem; /* deeper shrink */
 }
 
 .site-nav__links a:hover,
@@ -160,7 +160,7 @@ h1, h2, h3 {
 }
 
 .site-nav.is-compact .theme-toggle {
-  font-size: 0.55rem;
+  font-size: 0.7rem;
   padding: 0.25rem 0.5rem;
 }
 
