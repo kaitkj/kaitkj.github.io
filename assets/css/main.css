@@ -238,10 +238,10 @@ h1, h2, h3 {
   align-items: center;
   gap: 3rem;
   position: relative;
-  isolation: isolate; /* keeps ::before layer contained behind hero content */
+  isolation: isolate; /* keeps the background layer contained behind hero content */
 }
 
-.hero::before {
+.hero__bg {
   content: "";
   position: absolute;
   inset: 0;
@@ -252,10 +252,9 @@ h1, h2, h3 {
   opacity: 0.16;
   -webkit-mask-image: linear-gradient(to left, black 15%, transparent 70%);
           mask-image: linear-gradient(to left, black 15%, transparent 70%);
-  transition: opacity 0.2s ease;
 }
 
-[data-theme="dark"] .hero::before {
+[data-theme="dark"] .hero__bg {
   opacity: 0.22;
 }
 
