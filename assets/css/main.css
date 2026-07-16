@@ -48,11 +48,10 @@ a { color: inherit; }
 
 img { max-width: 100%; display: block; }
 
-h1, h2, h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.15;
-  margin: 0 0 0.5em;
+body h1, body h2, body h3, main h1, main h2, main main h3, 
+.hero h1, .site-title {
+  font-family: Charis, serif !important;
+  font-weight: 600 !important;
 }
 
 .eyebrow {
