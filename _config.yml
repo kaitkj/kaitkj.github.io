@@ -4,7 +4,7 @@ description: "Project manager & consumer electronics design engineer — embedde
 author: "Kai Jie Tan (Kyler)"
 github: kaitkj   # <-- replace with your GitHub username
 email: kai.tkj@outlook.sg  # <-- optional, shown in footer/about if you use it
-baseurl: " "             # keep empty for a username.github.io repo (root domain)
+baseurl: ""             # keep empty for a username.github.io repo (root domain)
 url: "https://kaitkj.github.io"  # <-- replace with your GitHub username
 
 # Build settings
