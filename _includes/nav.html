@@ -1,4 +1,4 @@
-<nav class="site-nav">
+<nav class="site-nav" id="site-nav">
   <a class="site-nav__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
   <ul class="site-nav__links">
     {% for item in site.data.navigation %}
@@ -39,5 +39,22 @@
       localStorage.setItem('theme', next);
       reflect();
     });
+  })();
+
+  // Shrink nav ~30% after scrolling past a small threshold; restore near top.
+  (function() {
+    var nav = document.getElementById('site-nav');
+    var threshold = 40;
+
+    function onScroll() {
+      if (window.scrollY > threshold) {
+        nav.classList.add('is-compact');
+      } else {
+        nav.classList.remove('is-compact');
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   })();
 </script>
