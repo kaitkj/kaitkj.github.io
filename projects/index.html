@@ -1,0 +1,44 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+<h1>Projects</h1>
+
+<div class="project-filters">
+  <button class="filter-btn is-active" data-filter="all">All</button>
+  {% assign categories = site.projects | map: "category" | uniq %}
+  {% for cat in categories %}
+    {% if cat %}
+      <button class="filter-btn" data-filter="{{ cat | slugify }}">{{ cat }}</button>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div class="project-grid">
+  {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+  {% for project in sorted_projects %}
+    <a class="project-card" href="{{ project.url | relative_url }}" data-category="{{ project.category | slugify }}">
+      {% if project.cover_image %}
+        <img src="{{ project.cover_image | relative_url }}" alt="{{ project.title }}">
+      {% endif %}
+      <h3>{{ project.title }}</h3>
+      <p class="project-card__tag">{{ project.category }}</p>
+      {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+    </a>
+  {% endfor %}
+</div>
+
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+      });
+    });
+  });
+</script>
