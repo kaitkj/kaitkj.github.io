@@ -1,0 +1,47 @@
+# Site settings
+title: "Kyler — Portfolio"
+description: "Project manager & consumer electronics design engineer — embedded systems, robotics/mechatronics, and AI-enabled physical systems."
+author: "Kai Jie Tan (Kyler)"
+github: kaitkj   # <-- replace with your GitHub username
+email: kai.tkj@outlook.sg  # <-- optional, shown in footer/about if you use it
+baseurl: "kaitkj.github.io"             # keep empty for a username.github.io repo (root domain)
+url: "https://kaitkj.github.io"  # <-- replace with your GitHub username
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  articles:
+    output: true
+    permalink: /articles/:path/
+
+# Default front matter (so you don't have to repeat layout in every file)
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "article"
+
+# Excludes from the build (keep repo tidy, doesn't affect live site)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+
+# Plugins (only ones on GitHub Pages' allowed list — safe to build directly)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
