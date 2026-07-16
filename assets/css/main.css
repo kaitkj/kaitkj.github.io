@@ -430,13 +430,51 @@ h1, h2, h3 {
    Individual project / article pages
    ========================================================================== */
 
-.project__tag,
 .article__meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--c-text-dim); /* Set the base text and date to a clean, subtle gray */
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.project__tag {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--c-accent);
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+.article__tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  
+  padding: 0.25rem 0.65rem;
+  margin-right: 0.4rem;
+  margin-bottom: 0.4rem;
+  border-radius: 100px;
+  
+  background-color: var(--c-bg-alt);
+  color: var(--c-text-dim);
+  border: 1px solid var(--c-border);
+  transition: all 0.2s ease;
+}
+
+/* Hover State */
+.article__tag:hover {
+  background-color: var(--c-accent);
+  color: var(--c-accent-contrast);
+  border-color: var(--c-accent);
+}
+
+.article__tag:last-child {
+  margin-right: 0;
 }
 
 .project__cover,
