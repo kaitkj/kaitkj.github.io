@@ -33,5 +33,5 @@ From this pivot, ESP-VoCat was born. What began as a limitation turned into the 
 In the end, we didn't settle for form following function, or function following form. We found a way where each elevates the other. Perhaps that is what good design is all about.
 
 ## Further Reading
-
-More on the dual-microphone development approach behind the beamforming setup is available on Espressif's own dev kits page: [Dual Microphone development on Espressif dev kits](https://www.espressif.com/en/products/devkits/esp-audio-devkits).
+More on the design, function and full open source documentation on ESP-VoCat: [ESP College - OSHWHUB](https://oshwhub.com/esp-college/echoear)
+More on the dual-microphone development approach behind the beamforming setup is available on Espressif's own dev kits page: [Dual Microphone development on Espressif dev kits](https://www.espressif.com/en/products/devkits/esp-audio-devkits)
