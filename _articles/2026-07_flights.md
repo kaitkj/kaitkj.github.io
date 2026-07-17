@@ -38,41 +38,37 @@ What began as colleagues eventually became friendships outside of work.
 
 These experiences reminded me that people don't leave their personal experiences at the office door. They bring them into the products they build, the decisions they make, and the relationships they form.
 
+## Learning How People Work
+
 After returning to Singapore from one of my longer work assignments, I had a one-on-one conversation with our HR Director who recommended that I read *The Culture Map* by Erin Meyer. It remains one of my favourite books on cross-cultural collaboration.
 
 The book describes how differently people around the world communicate, make decisions, and approach disagreements. Some meetings feel energetic and spontaneous, while others are formal and deliberate. Some cultures are more direct, while others rely heavily on context and relationships.
 
 Looking back, I realised I wasn't struggling with language barriers. I was learning how to communicate across cultures.
 
-## Learning How People Work
+## International Teams are Cross-Cultural Teams
 
 As a project manager facilitating discussions between colleagues from Singapore, India, China, and Europe, I continue to remind myself that managing projects isn't simply about managing timelines, budgets, and deliverables. It's equally about creating understanding between people who think differently and bring unique perspectives to the table.
 
 Being a project manager has taught me that successful projects are often less about having the perfect plan, and more about helping people move towards the same goal together.
 
-### Observations of 996, TangPing and NeiJuan
+## Observations of 996, TangPing and NeiJuan
 
-Having worked during a period when buzzwords such as 996, Tangping (lying flat), and Neijuan (involution) frequently appeared in conversations and media reports, I would also like to share a few personal observations. These experiences are entirely my own and were shaped by working in an international company led by a Singaporean CEO.
+Having worked during a period when buzzwords such as 996, Tangping (lying flat), and Neijuan (involution) frequently appeared in conversations and media reports, I would also like to share a few personal observations. These experiences are entirely my own. The reality, at least from what I observed, is often more nuanced than the headlines suggest.
 
-The reality, at least from what I observed, is often more nuanced than the headlines suggest.
-
-While overtime certainly exists, I found that work cultures vary greatly between companies and industries. Personally, I probably worked closer to a 10-10-5 schedule during my time there. Longer lunch breaks are common, and many colleagues continue conversations over dinner before returning to work. At the same time, I frequently found suppliers replying to messages late into the evening, and some worked on Saturdays. Efficiency and speed are highly valued, and that pace can naturally create longer working hours.
+While overtime certainly exists, I found that work cultures vary greatly between companies and industries. Personally, I probably worked closer to a 10-10-5 schedule during my time there. At the same time, I frequently found suppliers replying to messages late into the evening, and some worked on Saturdays. Efficiency and speed are highly valued, and that pace can naturally create longer working hours.
 
 Tangping emerged as a response to burnout and changing economic realities, much like the "quiet quitting" conversations we saw elsewhere around the world. Personally, I did not experience much of this among my immediate colleagues, who remained incredibly driven and passionate about their work. However, conversations with taxi drivers and people outside of work often provided a different perspective, reminding me that economic transitions affect people in very different ways.
 
-Neijuan was perhaps the most interesting observation for someone working in product development. Competition has become increasingly intense across almost every industry. Cost, efficiency, and speed are no longer enough on their own. Proper product differentiation and delivering emotional value to customers have become more important than ever. If there's one thing this environment taught me, it's that standing still is perhaps the greatest competitive disadvantage of all.
-
-This drive towards continuous improvement extends beyond products. It applies equally to the people building them.
+Neijuan was perhaps the most interesting observation for someone working in product development. Competition has become increasingly intense across almost every industry. Cost, efficiency, and speed are no longer enough on their own. Proper product differentiation to appeal to target users has become more important than ever. This drive towards continuous improvement extends beyond products. It applies equally to the people building them.
 
 ## Four Years Later
 
-Four years later, I've had the privilege of main-authoring a Chinese patent, understanding a most Chinese memes without needing an explanation, and finding myself well assimilated into a culture that once felt unfamiliar. More importantly, many of the colleagues I met along the way have become close friends outside of work.
+Four years later, I've had the privilege of main-authoring a Chinese patent, understanding most Chinese memes without needing an explanation, and finding myself well assimilated into a culture that once felt unfamiliar. More importantly, many of the colleagues I met along the way have become close friends outside of work.
 
-I thought I came here to learn how products are built.
+I thought I came here to learn how products are built. Instead, I learnt just as much about how people are built.
 
-Instead, I learnt just as much about how people are built.
-
-### Takeaways
+## Takeaways
 
 Great products require great teams. Great teams require understanding people.
 
