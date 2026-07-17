@@ -490,6 +490,9 @@ main h1, main h2, main h3,
 .gallery-img {
   cursor: pointer;
   transition: opacity 0.15s ease;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 .gallery-img:hover {
@@ -677,4 +680,9 @@ button:focus-visible {
   }
 
   .site-content { padding: 1.5rem 1rem 3rem; }
+
+  .project__gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
 }
