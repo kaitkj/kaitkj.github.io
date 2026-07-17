@@ -21,13 +21,10 @@ The ESP32-S3-BOX-3 is a compact, ready-to-use development kit aimed at makers, e
 
 Out of the box, it runs demos across sensor monitoring, IR learning (letting the box act as a universal remote for air conditioners, fans, TVs, and projectors), and media playback — all through a 2.4-inch touchscreen with dual microphones and a speaker built in. It's designed to sit comfortably in smart home, smart agriculture, energy management, and industrial IoT applications, as much as it is a teaching tool for IoT prototyping.
 
-<div class="video-embed">
-  <iframe src="https://www.youtube.com/embed/KGVOi1Mrjb0"
-          title="ESP32-S3-BOX-3 overview"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-</div>
+<a class="video-thumbnail-link" href="https://www.youtube.com/watch?v=KGVOi1Mrjb0" target="_blank" rel="noopener">
+  <img src="https://img.youtube.com/vi/KGVOi1Mrjb0/maxresdefault.jpg" alt="ESP32-S3-BOX-3 Promo — click to watch on YouTube">
+  <span class="video-thumbnail-link__play"></span>
+</a>
 
 ## What Went Into It — Especially the Accessories
 
@@ -40,13 +37,10 @@ The main unit was only part of the job. A big share of my time went into the acc
 
 Getting these into production meant working through mechanical tolerances and enclosure design as the industrial and mechanical design engineer on the team, then carrying those designs through DFM reviews and tooling with our manufacturing vendor. On the supply side, I liaised directly with component suppliers to keep parts on schedule, while also coordinating with electrical engineers on the PCB and connector interfaces and with developers on the firmware support to achieve the desired user experience.
 
-<div class="video-embed">
-  <iframe src="https://www.youtube.com/embed/4W3w93GQk7E"
-          title="ESP32-S3-BOX-3 accessories"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-</div>
+<a class="video-thumbnail-link" href="https://www.youtube.com/watch?v=4W3w93GQk7E" target="_blank" rel="noopener">
+  <img src="https://img.youtube.com/vi/4W3w93GQk7E/maxresdefault.jpg" alt="ESP32-S3-BOX-3 Unboxing — click to watch on YouTube">
+  <span class="video-thumbnail-link__play"></span>
+</a>
 
 ## Takeaways
 
