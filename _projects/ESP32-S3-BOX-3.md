@@ -11,6 +11,8 @@ gallery:
 tags: [ESP32-S3, Industrial Design, Mechanical Design, Tooling, Project Management, Product Management, AI, IoT]
 ---
 
+## ESP32-S3-BOX-3
+
 This was my first major product from end to end. I collected the product requirements, drafted the scope, and got approval from the project sponsor before later proposing the full user experience. Along the way I wore several hats — industrial designer, mechanical design engineer, and the person running tooling with our vendor and liaising with suppliers for parts — all on top of being the project manager coordinating with marketing, sales, developers, and electrical engineers.
 
 The result was the **ESP32-S3-BOX-3**, a fully open-source AIoT development kit built around the ESP32-S3 SoC.
