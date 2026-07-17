@@ -8,6 +8,8 @@ gallery:
   - /assets/images/projects/esp32-s3-box-3-1.jpg
   - /assets/images/projects/esp32-s3-box-3-2.jpg
   - /assets/images/projects/esp32-s3-box-3-3.jpg
+  - /assets/images/projects/esp32-s3-box-3-4.jpg
+  - /assets/images/projects/esp32-s3-box-3-5.jpg
 tags: [ESP32-S3, Industrial Design, Mechanical Design, Tooling, Project Management, Product Management, AI, IoT]
 ---
 
