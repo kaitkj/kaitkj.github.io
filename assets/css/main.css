@@ -53,7 +53,7 @@ main h1, main h2, main h3,
 .hero h1, .site-title {
   /* Listing Charis SIL first forces Chrome to map to the remote Google Font file instead of your corrupt system file */
   font-family: "Charis SIL", serif !important; 
-  font-weight: 700 !important;3333333333333333333
+  font-weight: 700 !important;
 }
 
 .eyebrow {
@@ -484,6 +484,7 @@ main h1, main h2, main h3,
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .video-embed {
@@ -550,24 +551,6 @@ main h1, main h2, main h3,
   border-bottom: 11px solid transparent;
   border-left: 18px solid var(--c-accent-contrast);
   margin-left: 4px; /* optically center the triangle */
-}
- 
-.project__tags {
-  display: flex;
-  gap: 0.5rem;
-  list-style: none;
-  padding: 0;
-  margin-top: 1.5rem;
-  flex-wrap: wrap;
-}
- 
-.project__tags li {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  border: 1px solid var(--c-border);
-  padding: 0.25rem 0.6rem;
-  border-radius: 3px;
-  color: var(--c-text-dim);
 }
 
 /* ==========================================================================
