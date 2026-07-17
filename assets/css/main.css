@@ -297,19 +297,21 @@ main h1, main h2, main h3,
 .hero h1 {
   font-size: clamp(2.0rem, 5.5vw, 3.4rem); /* Lifted the mobile minimum up safely since Charis fits easily */
   white-space: nowrap;
+  margin: 0 0 0.3rem; /* fixed value instead of the em-based default, so it doesn't scale up with this large font-size */
 }
-
+ 
 .hero__role {
   color: var(--c-text-dim);
   font-size: 1.1rem;
-  margin: 0 0 1rem;
+  margin: 0.6rem 0 1rem; /* clearer, deliberate gap above the role line */
 }
-
+ 
 .hero__status {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--c-accent);
   letter-spacing: 0.06em;
+  margin: 0 0 0.35rem;
 }
 
 /* ==========================================================================
