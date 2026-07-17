@@ -1,12 +1,10 @@
 ---
 title: "Building Great Products Starts with Understanding People"
 date: 2026-07-17
-summary: "Lessons from 50+ Hardware Projects and 10+ Trips to Shanghai"
+summary: "After 50+ Hardware Projects and 10+ Trips to Shanghai, I found the key to building Great Products"
 cover_image: /assets/images/articles/flights.jpg
 tags: [Project Management, People, Product]
 ---
-
-# Building Great Products Starts with Understanding People
 
 ## Lessons from 50+ Hardware Projects and 10+ Trips to Shanghai
 
