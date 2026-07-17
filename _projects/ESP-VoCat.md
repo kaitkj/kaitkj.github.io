@@ -1,7 +1,7 @@
 ---
 title: "Design of ESP-VoCat"
 date: 2024-06-10
-categories: Consumer Electronics
+category: Consumer Electronics
 summary: "How a hard microphone-placement constraint on an AI desktop robot turned into the product's defining feature."
 cover_image: /assets/images/projects/esp-vocat-cover.jpg
 gallery:
