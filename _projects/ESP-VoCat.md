@@ -1,15 +1,16 @@
 ---
 title: "Design of ESP-VoCat"
 date: 2024-06-10
-categories: [Industrial Design, Product Design, Consumer Electronics]
+categories: Consumer Electronics
 summary: "How a hard microphone-placement constraint on an AI desktop robot turned into the product's defining feature."
 cover_image: /assets/images/projects/esp-vocat-cover.jpg
 gallery:
   - /assets/images/projects/esp-vocat-1.jpg
   - /assets/images/projects/esp-vocat-2.jpg
 video_url: "https://www.youtube.com/watch?v=th9ypRw3xBU&t=8s"
-tags: [ESP32, Voice Recognition, Beamforming, Industrial Design]
+tags: [ESP32-S3, Voice Recognition, Beamforming, Industrial Design, Mechanical Design, Tooling, Product Management, AI, IoT]
 ---
+
 ## Opportunity Arises from the Toughest Limitations
 
 "Form follows function" is a principle we all know, but what happens when form and function seem to be at odds, staring each other down across the sketchpad?
