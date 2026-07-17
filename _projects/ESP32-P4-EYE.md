@@ -94,3 +94,5 @@ Does this help the product become better for our customers?
 Serving as the Project Manager while contributing to the product management, industrial design, and mechanical design of this project was both challenging and incredibly rewarding, and I'm excited to see how developers will continue pushing the boundaries of what the ESP32-P4 can achieve.
 
 After all, good products don't happen by accident. They're designed intentionally.
+
+Click here to find out [more about ESP32-P4-EYE](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32p4/esp32-p4-eye/user_guide.html)
