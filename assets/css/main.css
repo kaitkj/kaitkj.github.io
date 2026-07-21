@@ -299,13 +299,13 @@ main h1, main h2, main h3,
   white-space: nowrap;
   margin: 0 0 0.3rem; /* fixed value instead of the em-based default, so it doesn't scale up with this large font-size */
 }
- 
+
 .hero__role {
   color: var(--c-text-dim);
   font-size: 1.1rem;
   margin: 0.6rem 0 1rem; /* clearer, deliberate gap above the role line */
 }
- 
+
 .hero__status {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -428,6 +428,32 @@ main h1, main h2, main h3,
   background: var(--c-accent);
   border-color: var(--c-accent);
   color: var(--c-accent-contrast);
+}
+
+/* ==========================================================================
+   Resume download button (About page)
+   ========================================================================== */
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.7rem 1.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--c-accent-contrast);
+  background: var(--c-accent);
+  border: 1px solid var(--c-accent);
+  border-radius: 3px;
+  transition: opacity 0.15s ease;
+}
+
+.resume-btn:hover {
+  opacity: 0.85;
 }
 
 /* ==========================================================================
