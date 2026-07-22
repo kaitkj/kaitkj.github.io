@@ -1,77 +1,51 @@
 ---
 layout: default
+title: Articles
+permalink: /articles/
 ---
-<article class="article">
 
-  <header class="article__header">
-    <h1>{{ page.title }}</h1>
-    <p class="article__meta">
-      {{ page.date | date: "%B %-d, %Y" }}
-      {% if page.tags %}
-        · {% for tag in page.tags %}<span class="article__tag">{{ tag }}</span>{% endfor %}
-      {% endif %}
-    </p>
-    {% if page.summary %}<p class="article__summary">{{ page.summary }}</p>{% endif %}
-  </header>
+<h1>Articles</h1>
 
-  {% if page.cover_image %}
-    <img class="article__cover" src="{{ page.cover_image | relative_url }}" alt="{{ page.title }} cover image">
-  {% endif %}
+<div class="article-filters">
+  <button class="filter-btn is-active" data-filter="all">All</button>
+  {% assign all_tags = "" | split: "" %}
+  {% for a in site.articles %}
+    {% if a.tags %}{% assign all_tags = all_tags | concat: a.tags %}{% endif %}
+  {% endfor %}
+  {% assign unique_tags = all_tags | uniq %}
+  {% for tag in unique_tags %}
+    <button class="filter-btn" data-filter="{{ tag | slugify }}">{{ tag }}</button>
+  {% endfor %}
+</div>
 
-  {% if page.gallery %}
-    <div class="project__gallery">
-      {% for img in page.gallery %}
-        <img src="{{ img | relative_url }}" alt="{{ page.title }} image" class="gallery-img" data-full="{{ img | relative_url }}">
-      {% endfor %}
-    </div>
+<div class="article-list">
+  {% assign sorted_articles = site.articles | sort: "date" | reverse %}
+  {% for a in sorted_articles %}
+    {% assign slugified_tags = "" %}
+    {% for t in a.tags %}
+      {% assign one_slug = t | slugify %}
+      {% assign slugified_tags = slugified_tags | append: one_slug | append: "," %}
+    {% endfor %}
+    <a class="article-card"
+       href="{{ a.url | relative_url }}"
+       data-tags="{{ slugified_tags }}">
+      <h3>{{ a.title }}</h3>
+      <p class="article-card__meta">{{ a.date | date: "%B %-d, %Y" }}</p>
+      {% if a.summary %}<p>{{ a.summary }}</p>{% endif %}
+    </a>
+  {% endfor %}
+</div>
 
-    <div class="lightbox" id="lightbox">
-      <button class="lightbox__close" id="lightbox-close" aria-label="Close image">&times;</button>
-      <img class="lightbox__image" id="lightbox-image" src="" alt="">
-    </div>
-
-    <script>
-      (function() {
-        var lightbox = document.getElementById('lightbox');
-        var lightboxImg = document.getElementById('lightbox-image');
-        var closeBtn = document.getElementById('lightbox-close');
-
-        function openLightbox(src, alt) {
-          lightboxImg.src = src;
-          lightboxImg.alt = alt;
-          lightbox.classList.add('is-active');
-          document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-          lightbox.classList.remove('is-active');
-          lightboxImg.src = '';
-          document.body.style.overflow = '';
-        }
-
-        document.querySelectorAll('.gallery-img').forEach(function(img) {
-          img.addEventListener('click', function() {
-            openLightbox(img.dataset.full, img.alt);
-          });
-        });
-
-        closeBtn.addEventListener('click', closeLightbox);
-
-        lightbox.addEventListener('click', function(e) {
-          if (e.target === lightbox) {
-            closeLightbox();
-          }
-        });
-
-        document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape') closeLightbox();
-        });
-      })();
-    </script>
-  {% endif %}
-
-  <div class="article__body">
-    {{ content }}
-  </div>
-
-</article>
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.article-card').forEach(card => {
+        const tags = card.dataset.tags.split(',');
+        card.style.display = (filter === 'all' || tags.includes(filter)) ? '' : 'none';
+      });
+    });
+  });
+</script>
