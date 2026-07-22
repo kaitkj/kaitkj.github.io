@@ -5,7 +5,7 @@ summary: "Building Tomorrow's Hardware Ecosystem, One Student at a Time"
 cover_image: /assets/images/articles/partnership.jpg
 gallery:
   - /assets/images/articles/vmposter.jpg
-  - /assets/images/articles/vm2.jpg
+  - /assets/images/articles/vm1.jpg
   - /assets/images/articles/vm2.jpg
 tags: [Project Management, People, Stakeholder Management]
 ---
