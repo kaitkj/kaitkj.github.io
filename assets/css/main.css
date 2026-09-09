@@ -508,23 +508,51 @@ main h1, main h2, main h3,
 }
 
 .project__gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem; /* Space for scrollbar focus */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Optional: Subtle custom scrollbar */
+.project__gallery::-webkit-scrollbar {
+  height: 6px;
+}
+
+.project__gallery::-webkit-scrollbar-track {
+  background: var(--c-bg-alt);
+}
+
+.project__gallery::-webkit-scrollbar-thumb {
+  background: var(--c-border);
+  border-radius: 3px;
+}
+
+.project__gallery::-webkit-scrollbar-thumb:hover {
+  background: var(--c-accent);
 }
 
 .gallery-img {
-  cursor: pointer;
-  transition: opacity 0.15s ease;
-  width: 100%;
+  flex: 0 0 auto;
+  width: auto;
+  height: 240px; /* Fixed height creates a consistent row */
   aspect-ratio: 1/1;
   object-fit: cover;
+  cursor: pointer;
+  scroll-snap-align: start;
+  border: 1px solid var(--c-border);
+  transition: opacity 0.15s ease, border-color 0.15s ease;
 }
 
 .gallery-img:hover {
   opacity: 0.82;
+  border-color: var(--c-accent);
 }
 
 .lightbox {
@@ -709,10 +737,6 @@ button:focus-visible {
 
   .site-content { padding: 1.5rem 1rem 3rem; }
 
-  .project__gallery {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-  }
 }
 
 /* ==========================================================================
