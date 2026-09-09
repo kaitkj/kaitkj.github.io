@@ -1,176 +1,163 @@
 ---
-
-## layout: default
+layout: default
+---
 
 <article class="project">
 
   <header class="project__header">
     <p class="project__tag">
-      {% if page.categories %}{{ page.categories | join: " · " }}{% else %}{{ page.category }}{% endif %}
+      {% if page.categories %}
+        {{ page.categories | join: " · " }}
+      {% else %}
+        {{ page.category }}
+      {% endif %}
     </p>
+
     <h1>{{ page.title }}</h1>
+
     <p class="article__meta">
       {{ page.date | date: "%B %-d, %Y" }}
       {% if page.tags %}
-        · {% for tag in page.tags %}<span class="article__tag">{{ tag }}</span>{% endfor %}
+        ·
+        {% for tag in page.tags %}
+          <span class="article__tag">{{ tag }}</span>
+        {% endfor %}
       {% endif %}
     </p>
-    {% if page.summary %}<p class="project__summary">{{ page.summary }}</p>{% endif %}
+
+    {% if page.summary %}
+      <p class="project__summary">{{ page.summary }}</p>
+    {% endif %}
   </header>
 
-{% if page.cover_image %} <img class="project__cover" src="{{ page.cover_image | relative_url }}" alt="{{ page.title }} cover image">
-{% endif %}
+  {% if page.cover_image %}
+    <img
+      class="project__cover"
+      src="{{ page.cover_image | relative_url }}"
+      alt="{{ page.title }} cover image">
+  {% endif %}
 
-{% if page.gallery %} <div class="project__gallery">
-{% for img in page.gallery %} <img src="{{ img | relative_url }}"
+  {% if page.gallery %}
+
+    <div class="project__gallery">
+      {% for img in page.gallery %}
+        <img
+          src="{{ img | relative_url }}"
           alt="{{ page.title }} image"
           class="gallery-img"
           data-full="{{ img | relative_url }}">
-{% endfor %} </div>
+      {% endfor %}
+    </div>
 
-```
-<div class="lightbox" id="lightbox">
-  <button class="lightbox__close" id="lightbox-close" aria-label="Close image">&times;</button>
+    <div class="lightbox" id="lightbox">
+      <button
+        class="lightbox__close"
+        id="lightbox-close"
+        aria-label="Close image">&times;</button>
 
-  <button class="lightbox__nav lightbox__nav--prev"
-          id="lightbox-prev"
-          aria-label="Previous image">&#10094;</button>
+      <img
+        class="lightbox__image"
+        id="lightbox-image"
+        src=""
+        alt="">
+    </div>
 
-  <img class="lightbox__image" id="lightbox-image" src="" alt="">
+    <script>
+      (function() {
+        var lightbox = document.getElementById('lightbox');
+        var lightboxImg = document.getElementById('lightbox-image');
+        var closeBtn = document.getElementById('lightbox-close');
 
-  <button class="lightbox__nav lightbox__nav--next"
-          id="lightbox-next"
-          aria-label="Next image">&#10095;</button>
-</div>
+        function openLightbox(src, alt) {
+          lightboxImg.src = src;
+          lightboxImg.alt = alt;
+          lightbox.classList.add('is-active');
+          document.body.style.overflow = 'hidden';
+        }
 
-<script>
-  (function() {
-    var lightbox = document.getElementById('lightbox');
-    var lightboxImg = document.getElementById('lightbox-image');
-    var closeBtn = document.getElementById('lightbox-close');
-    var prevBtn = document.getElementById('lightbox-prev');
-    var nextBtn = document.getElementById('lightbox-next');
-    var galleryImgs = Array.prototype.slice.call(
-      document.querySelectorAll('.gallery-img')
-    );
-    var currentIndex = 0;
+        function closeLightbox() {
+          lightbox.classList.remove('is-active');
+          lightboxImg.src = '';
+          document.body.style.overflow = '';
+        }
 
-    function showImage(index) {
-      if (index < 0) {
-        index = galleryImgs.length - 1;
-      }
+        document.querySelectorAll('.gallery-img').forEach(function(img) {
+          img.addEventListener('click', function() {
+            openLightbox(img.dataset.full, img.alt);
+          });
+        });
 
-      if (index >= galleryImgs.length) {
-        index = 0;
-      }
+        closeBtn.addEventListener('click', closeLightbox);
 
-      currentIndex = index;
+        // Click anywhere outside the image (the dark backdrop) closes it
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
 
-      lightboxImg.src = galleryImgs[currentIndex].dataset.full;
-      lightboxImg.alt = galleryImgs[currentIndex].alt;
-    }
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') closeLightbox();
+        });
+      })();
+    </script>
 
-    function openLightbox(index) {
-      showImage(index);
-      lightbox.classList.add('is-active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      lightbox.classList.remove('is-active');
-      lightboxImg.src = '';
-      document.body.style.overflow = '';
-    }
-
-    galleryImgs.forEach(function(img, index) {
-      img.addEventListener('click', function() {
-        openLightbox(index);
-      });
-    });
-
-    closeBtn.addEventListener('click', closeLightbox);
-
-    prevBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      showImage(currentIndex - 1);
-    });
-
-    nextBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      showImage(currentIndex + 1);
-    });
-
-    // Click anywhere outside the image to close the lightbox
-    lightbox.addEventListener('click', function(e) {
-      if (e.target === lightbox) {
-        closeLightbox();
-      }
-    });
-
-    // Keyboard controls
-    document.addEventListener('keydown', function(e) {
-      if (!lightbox.classList.contains('is-active')) return;
-
-      if (e.key === 'Escape') {
-        closeLightbox();
-      }
-
-      if (e.key === 'ArrowLeft') {
-        showImage(currentIndex - 1);
-      }
-
-      if (e.key === 'ArrowRight') {
-        showImage(currentIndex + 1);
-      }
-    });
-  })();
-</script>
-```
-
-{% endif %}
+  {% endif %}
 
   <div class="project__body">
     {{ content }}
   </div>
 
-{% if page.video_url %} <div class="project__video">
-{% assign v = page.video_url %}
+  {% if page.video_url %}
 
-```
-  {% if v contains "youtube.com" or v contains "youtu.be" %}
-    {% assign yt_id = v | split: "v=" | last | split: "&" | first %}
+    <div class="project__video">
 
-    {% if v contains "youtu.be" %}
-      {% assign yt_id = v | split: "youtu.be/" | last | split: "?" | first %}
-    {% endif %}
+      {% assign v = page.video_url %}
 
-    <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/{{ yt_id }}"
-              title="{{ page.title }} video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+      {% if v contains "youtube.com" or v contains "youtu.be" %}
+
+        {% assign yt_id = v | split: "v=" | last | split: "&" | first %}
+
+        {% if v contains "youtu.be" %}
+          {% assign yt_id = v | split: "youtu.be/" | last | split: "?" | first %}
+        {% endif %}
+
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/{{ yt_id }}"
+            title="{{ page.title }} video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      {% elsif v contains "vimeo.com" %}
+
+        {% assign vimeo_id = v | split: "vimeo.com/" | last | split: "?" | first %}
+
+        <div class="video-embed">
+          <iframe
+            src="https://player.vimeo.com/video/{{ vimeo_id }}"
+            title="{{ page.title }} video"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      {% else %}
+
+        <p>
+          <a href="{{ v }}" target="_blank" rel="noopener">
+            Watch video
+          </a>
+        </p>
+
+      {% endif %}
+
     </div>
 
-  {% elsif v contains "vimeo.com" %}
-    {% assign vimeo_id = v | split: "vimeo.com/" | last | split: "?" | first %}
-
-    <div class="video-embed">
-      <iframe src="https://player.vimeo.com/video/{{ vimeo_id }}"
-              title="{{ page.title }} video"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen></iframe>
-    </div>
-
-  {% else %}
-    <p>
-      <a href="{{ v }}" target="_blank" rel="noopener">Watch video</a>
-    </p>
   {% endif %}
-</div>
-```
-
-{% endif %}
 
 </article>
