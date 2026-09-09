@@ -51,5 +51,3 @@ I did the initial concept sketches by hand, developed the design in CAD, 3D-Prin
 More importantly, this project was an opportunity to bring together the parts of product development I enjoy most:
 𝐏𝐫𝐨𝐝𝐮𝐜𝐭 𝐬𝐭𝐫𝐚𝐭𝐞𝐠𝐲 × 𝐈𝐧𝐝𝐮𝐬𝐭𝐫𝐢𝐚𝐥 𝐃𝐞𝐬𝐢𝐠𝐧 × 𝐌𝐞𝐜𝐡𝐚𝐧𝐢𝐜𝐚𝐥 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 × 𝐏𝐫𝐨𝐣𝐞𝐜𝐭 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭
 I believe the best consumer products happen at the intersection of these disciplines.
-
-I'd love to hear from people in consumer electronics: Would you buy a Dyson shaver? And more importantly, what would Dyson have to do differently for you to choose it over Philips, Braun or Panasonic?
