@@ -24,7 +24,7 @@ gallery:
   - /assets/images/projects/Concept_shaver_18.jpg
   - /assets/images/projects/Concept_shaver_19.jpg
 video_url: "https://youtu.be/t6S8D-6qQXk"
-tags: [Industrial Design, 3D Rendering, Market Positioning, Market Research, Requirements Prioritisation, Mechanical Design, Product Management, Prototyping]
+tags: [Industrial Design, 3D Rendering, Market Positioning, Market Research, Product Strategy, Mechanical Design, Product Management, Prototyping]
 ---
 
 ## Context
